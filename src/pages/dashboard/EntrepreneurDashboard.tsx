@@ -10,6 +10,8 @@ import { useAuth } from '../../context/AuthContext';
 import { CollaborationRequest } from '../../types';
 import { getRequestsForEntrepreneur } from '../../data/collaborationRequests';
 import { investors } from '../../data/users';
+import MeetingCalendar from "../../components/MeetingCalendar";
+
 
 export const EntrepreneurDashboard: React.FC = () => {
   const { user } = useAuth();
@@ -52,7 +54,11 @@ export const EntrepreneurDashboard: React.FC = () => {
           </Button>
         </Link>
       </div>
-      
+      <div className="mt-8">
+  
+  <h2 className="text-xl font-semibold mb-4">Meetings</h2>
+  <MeetingCalendar />
+</div>
       {/* Summary cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card className="bg-primary-50 border border-primary-100">

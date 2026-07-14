@@ -10,6 +10,7 @@ import { useAuth } from '../../context/AuthContext';
 import { Entrepreneur } from '../../types';
 import { entrepreneurs } from '../../data/users';
 import { getRequestsFromInvestor } from '../../data/collaborationRequests';
+import MeetingCalendar from "../../components/MeetingCalendar";
 
 export const InvestorDashboard: React.FC = () => {
   const { user } = useAuth();
@@ -66,7 +67,10 @@ export const InvestorDashboard: React.FC = () => {
           </Button>
         </Link>
       </div>
-      
+      <div className="mt-8">
+        <h2 className="text-xl font-semibold mb-4">Meetings</h2>
+        <MeetingCalendar />
+      </div>
       {/* Filters and search */}
       <div className="flex flex-col md:flex-row gap-4">
         <div className="w-full md:w-2/3">
