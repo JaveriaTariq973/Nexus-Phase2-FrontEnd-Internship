@@ -57,6 +57,10 @@ The existing Tailwind CSS theme (primary, secondary, and accent color palettes d
 - Meeting requests can be accepted or declined.
 - Confirmed meetings are reflected on the dashboard.
 
+### Milestone 3 – Video Calling Section 
+- Frontend mock video call interface built using the browser's `getUserMedia` API.
+- Start/End call controls, mic and camera toggle.
+
 ### Milestone 4 – Document Processing Chamber 
 - Upload and preview documents (PDF/DOC).
 - E-signature capture using `react-signature-canvas`.

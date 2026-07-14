@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-
 // Layouts
 import { DashboardLayout } from './components/layout/DashboardLayout';
 
@@ -23,6 +22,7 @@ import { EntrepreneursPage } from './pages/entrepreneurs/EntrepreneursPage';
 import { MessagesPage } from './pages/messages/MessagesPage';
 import { NotificationsPage } from './pages/notifications/NotificationsPage';
 import { DocumentsPage } from './pages/documents/DocumentsPage';
+import { VideoCall } from './components/VideoCall';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
 import { DealsPage } from './pages/deals/DealsPage';
@@ -72,6 +72,10 @@ function App() {
             <Route index element={<DocumentsPage />} />
           </Route>
           
+          <Route path="/video-call" element={<DashboardLayout />}>
+  <Route index element={<VideoCall />} />
+</Route>
+
           <Route path="/settings" element={<DashboardLayout />}>
             <Route index element={<SettingsPage />} />
           </Route>
